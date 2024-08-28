@@ -1,96 +1,192 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     color: #333;
+    line-height: 1.6;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: background 0.3s;
 }
 
-.hero {
-    margin: 20px 0;
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
-.hero h1 {
-    font-size: 3em;
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
 }
 
-.hero p {
+.hero-content p {
     font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
 .cta-button {
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white;
     padding: 10px 20px;
-    text-decoration: none;
     border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
+    font-weight: 600;
+    transition: background 0.3s;
 }
 
 .cta-button:hover {
     background-color: #0056b3;
 }
 
+/* Project Section Styles */
 main {
-    padding: 20px;
+    padding: 50px;
+}
+
+#projects {
+    margin-top: 50px;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #007bff;
 }
 
 .project-list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .project-item {
     background-color: white;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
     width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .project-item h3 {
-    margin-top: 0;
+    margin: 15px;
+    font-size: 1.5em;
 }
 
 .project-item p {
+    margin: 15px;
     font-size: 1em;
+    color: #666;
 }
 
-.project-item a {
-    color: #007BFF;
-    text-decoration: none;
+.project-link {
+    display: block;
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
 }
 
+.project-link:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Section Styles */
+#contact {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #007bff;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin: 10px 0;
+}
+
+#contact ul li a {
+    font-size: 1.2em;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+#contact ul li a:hover {
+    color: #0056b3;
+}
+
+/* Footer Styles */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
+    margin-top: 50px;
 }
